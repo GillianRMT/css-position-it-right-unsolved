@@ -2,15 +2,16 @@
   flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
+  margin-top: 60px;
   display: flex;
   align-content: center;
   justify-content: center;
 }
 
 .robot-face-shape {
-  /* position: relative; */
   height: 500px;
   width: 600px;
+  margin-left: 88.82px;
   border-radius: 10%;
   border: 20px solid purple;
 }
@@ -43,15 +44,15 @@
 .robot-ear-left {
   position: relative;
   top: 100px;
-  left: -620px;
+  right: 650px;
   height: 300px;
   width: 0.7em;
   background-color: blueviolet;
 }
 
 .robot-ear-right {
-  margin-top: 100px;
-  margin-left: 10px;
+  position: relative;
+  top: 100px;
   width: 0;
   height: 0;
   border-top: 50px solid transparent;
@@ -97,7 +98,7 @@
 
 .robot-tooth {
   position: relative;
-  top: 10px;
+  top: 2.5px;
   left: 100px;
   height: 30px;
   width: 25px;
@@ -106,13 +107,58 @@
 }
 
 .robot-hair-style {
+  position: relative;
+  right: 430px;
+  bottom: 23px;
+  height: 20px;
+  width: 20px;
+  background-color: palevioletred;
 }
 
 .robot-hair-one {
+  position: relative;
+  left: 28px;
+  top: -48px;
+  height: 50px;
+  width: 4px;
+  background-color: brown;
+  transform: rotate(30deg);
 }
 
 .robot-hair-two {
+  position: relative;
+  left: 9px;
+  top: -100px;
+  height: 50px;
+  width: 4px;
+  background-color: brown;
 }
 
 .robot-hair-three {
+  position: relative;
+  left: -11px;
+  top: -148px;
+  height: 50px;
+  width: 4px;
+  background-color: brown;
+  transform: rotate(330deg);
+}
+
+.robot-hair-four {
+  position: relative;
+  left: 16px;
+  top: -200px;
+  height: 50px;
+  width: 4px;
+  background-color: brown;
+  transform: rotate(15deg);
+}
+
+.robot-hair-five {
+  position: relative;
+  top: -250px;
+  height: 50px;
+  width: 4px;
+  background-color: brown;
+  transform: rotate(345deg);
 }
