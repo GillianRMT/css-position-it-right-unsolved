@@ -2,13 +2,13 @@
   flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
+  margin-top: 60px;
   display: flex;
   align-content: center;
   justify-content: center;
 }
 
 .robot-face-shape {
-  /* position: relative; */
   height: 500px;
   width: 600px;
   border-radius: 10%;
@@ -41,7 +41,7 @@
 }
 
 .robot-ear-left {
-  position: relative;
+  position: absolute;
   top: 100px;
   left: -620px;
   height: 300px;
@@ -50,8 +50,9 @@
 }
 
 .robot-ear-right {
-  margin-top: 100px;
-  margin-left: 10px;
+  position: absolute;
+  top: ;
+  right: ;
   width: 0;
   height: 0;
   border-top: 50px solid transparent;
@@ -106,13 +107,30 @@
 }
 
 .robot-hair-style {
+  position: relative;
+  right: 450px;
+  bottom: 35px;
+  height: 30px;
+  width: 30px;
+  background-color: palevioletred;
 }
 
 .robot-hair-one {
+  height: 50px;
+  width: 5px;
+  background-color: brown;
+  transform: rotate(30deg);
 }
 
 .robot-hair-two {
+  height: 50px;
+  width: 5px;
+  background-color: brown;
 }
 
 .robot-hair-three {
+  height: 50px;
+  width: 5px;
+  background-color: brown;
+  transform: rotate(330deg);
 }
