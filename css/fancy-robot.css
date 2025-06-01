@@ -16,6 +16,21 @@
   border: 20px solid purple;
 }
 
+@keyframes eye-left {
+  from {
+    height: 100px;
+    width: 150px;
+    transform: rotate(0deg);
+  }
+
+  to {
+    height: 1px;
+    width: 2px;
+    margin: 50px;
+    transform: rotate(360deg);
+  }
+}
+
 .robot-eye-left {
   position: relative;
   top: 50px;
@@ -24,6 +39,35 @@
   width: 150px;
   background-image: url(https://picsum.photos/id/29/150/100);
   border-radius: 50%;
+  animation: eye-left 2s alternate infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background: linear-gradient(purple, pink, blue);
+  }
+
+  50% {
+    background: linear-gradient(pink, blue, purple);
+  }
+
+  75% {
+    background: linear-gradient(blue, purple, pink);
+  }
+
+  100% {
+    background: linear-gradient(purple, pink, blue);
+  }
+}
+
+@keyframes bounce {
+  from {
+    top: -50px;
+  }
+
+  to {
+    top: -70px;
+  }
 }
 
 .robot-eye-right {
@@ -39,6 +83,37 @@
   mask: radial-gradient(50% 50%, #0000 66%, #000 67%) round var(--r) var(--r) /
       calc(2 * var(--r)) calc(2 * var(--r)),
     conic-gradient(#000 0 0) content-box;
+  animation: gradient 1s infinite alternate,
+    bounce 300ms infinite alternate ease;
+}
+
+@keyframes move {
+  0% {
+    top: 100px;
+    right: 650px;
+  }
+  20% {
+    top: 350px;
+    height: 50px;
+  }
+
+  40% {
+    right: 700px;
+  }
+
+  60% {
+    right: 700px;
+    top: 100px;
+    height: 300px;
+  }
+
+  80% {
+    height: 50px;
+  }
+
+  100% {
+    right: 650px;
+  }
 }
 
 .robot-ear-left {
@@ -48,6 +123,17 @@
   height: 300px;
   width: 0.7em;
   background-color: blueviolet;
+  animation: move 4s infinite, disappear 2ms infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(10deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .robot-ear-right {
@@ -58,6 +144,22 @@
   border-top: 50px solid transparent;
   border-right: 100px solid hotpink;
   border-bottom: 50px solid transparent;
+  animation: rotate 70ms 2s infinite;
+}
+
+@keyframes nose {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(10);
+    display: none;
+  }
+}
+
+.robot-nose:hover {
+  animation: nose 3s 1 forwards;
 }
 
 .robot-nose {
@@ -67,6 +169,28 @@
   width: 10%;
   border-radius: 50%;
   background: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+
+@keyframes invert {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  .1% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  50.1% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .robot-teeth {
@@ -94,6 +218,18 @@
       )
       50% calc(50% + var(--s) / 2 + var(--b) / 2) / calc(4 * var(--s))
       calc(var(--s) + var(--b)) repeat-x;
+
+  animation: invert 3s 2s infinite, rotate 65ms 40s infinite;
+}
+
+@keyframes tooth {
+  from {
+    scale: 1;
+  }
+
+  to {
+    scale: 2;
+  }
 }
 
 .robot-tooth {
@@ -104,6 +240,22 @@
   width: 25px;
   background: #f1bb0885;
   mask: radial-gradient(#0000 71%, #000 72%) 10000% 10000%/99.5% 99.5%;
+  animation: tooth 1s;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    background-color: purple;
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .robot-hair-style {
@@ -113,6 +265,57 @@
   height: 20px;
   width: 20px;
   background-color: palevioletred;
+  animation: disappear 1s 2s 6;
+}
+
+@keyframes hair-two {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes hair-one {
+  from {
+    transform: rotate(30deg);
+  }
+
+  to {
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes hair-three {
+  from {
+    transform: rotate(330deg);
+  }
+
+  to {
+    transform: rotate(310deg);
+  }
+}
+
+@keyframes hair-four {
+  from {
+    transform: rotate(15deg);
+  }
+
+  to {
+    transform: rotate(35deg);
+  }
+}
+
+@keyframes hair-five {
+  from {
+    transform: rotate(345deg);
+  }
+
+  to {
+    transform: rotate(315deg);
+  }
 }
 
 .robot-hair-one {
@@ -122,7 +325,7 @@
   height: 50px;
   width: 4px;
   background-color: brown;
-  transform: rotate(30deg);
+  animation: hair-one 0.5s infinite alternate;
 }
 
 .robot-hair-two {
@@ -132,6 +335,7 @@
   height: 50px;
   width: 4px;
   background-color: brown;
+  animation: hair-two 0.5s infinite alternate;
 }
 
 .robot-hair-three {
@@ -141,7 +345,7 @@
   height: 50px;
   width: 4px;
   background-color: brown;
-  transform: rotate(330deg);
+  animation: hair-three 0.5s infinite alternate;
 }
 
 .robot-hair-four {
@@ -151,7 +355,7 @@
   height: 50px;
   width: 4px;
   background-color: brown;
-  transform: rotate(15deg);
+  animation: hair-four 0.5s infinite alternate;
 }
 
 .robot-hair-five {
@@ -160,5 +364,5 @@
   height: 50px;
   width: 4px;
   background-color: brown;
-  transform: rotate(345deg);
+  animation: hair-five 0.5s infinite alternate;
 }
