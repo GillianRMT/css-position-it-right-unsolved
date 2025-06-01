@@ -152,6 +152,11 @@
     transform: scale(1);
   }
 
+  90% {
+    transform: scale(10);
+    display: none;
+  }
+
   100% {
     transform: scale(10);
     display: none;
