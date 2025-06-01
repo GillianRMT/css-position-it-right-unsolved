@@ -152,7 +152,7 @@
     transform: scale(1);
   }
 
-  90% {
+  50% {
     transform: scale(10);
     display: none;
   }
@@ -164,7 +164,7 @@
 }
 
 .robot-nose:hover {
-  animation: nose 3s 1 forwards;
+  animation: nose 4s 1 forwards;
 }
 
 .robot-nose {
